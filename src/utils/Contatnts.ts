@@ -1,6 +1,7 @@
 export interface IContact {
+    id: string;
     firstName: string;
-    lastname: string;
+    lastName: string;
     status: string;
 }
 

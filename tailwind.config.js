@@ -21,7 +21,8 @@ export default {
       "black-100": '#000',
       red: '#EB5757',
       transparent: 'transparent',
-      
+      "active": '#70db9b',
+      "inactive": "#ff8c8c"
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

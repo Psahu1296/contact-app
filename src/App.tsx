@@ -7,26 +7,36 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ContactList from "./components/ContactList";
 import ChartsMaps from "./components/ChartsMaps";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 
 function App() {
-  const [selectedTab, setSeleectedTab] = useState<number>(0)
+  const [selectedTab, setSeleectedTab] = useState<number>(0);
   return (
     <div className="App h-[100vh]">
       <Provider store={store}>
-      <BrowserRouter>
-        <div className="flex h-full">
-        <Sidebar selectedTab={selectedTab} setSelectedTab={setSeleectedTab}/>
-        <div className="flex-1 flex flex-col">
-        <Header selectedTab={selectedTab}/>
-        <div className="flex-1 w-full h-full">
-        <Routes>
-          <Route path='/' element={<ContactList />}/>
-          <Route path="chart-map" element={<ChartsMaps />}/>
-        </Routes>
-        </div>
-        </div>
-        </div>
-        </BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <div className="flex h-full">
+              <Sidebar
+                selectedTab={selectedTab}
+                setSelectedTab={setSeleectedTab}
+              />
+              <div className="flex-1 flex flex-col">
+                <Header selectedTab={selectedTab} />
+                <div className="flex-1 w-full h-full">
+                  <Routes>
+                    <Route path="/" element={<ContactList />} />
+                    <Route path="chart-map" element={<ChartsMaps />} />
+                  </Routes>
+                </div>
+              </div>
+            </div>
+          </BrowserRouter>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
       </Provider>
     </div>
   );

@@ -2,3 +2,17 @@
 .sidebar {
     background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% );
 }
+
+map {
+    height: 500px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 16px;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.map .leaflet-container {
+    height: 100%;
+    border-radius: 12px;
+}
