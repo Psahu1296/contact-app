@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
 export default {
   content: [
     "./index.html",
@@ -6,7 +8,7 @@ export default {
   ],
   theme: {
     colors: {
-      green: '#3DB46D',
+      green: '#38CAB3',
       red: '#EB5757',
       primary: '#ffffff',
       secondary: '#4F4F4F',
@@ -16,7 +18,7 @@ export default {
     backgroundColor: {
       primary: '#000000',
       secondary: '#4F4F4F',
-      green: '#3DB46D',
+      green: '#38cab3',
       white: '#fff',
       "black-100": '#000',
       red: '#EB5757',
@@ -29,6 +31,13 @@ export default {
       serif: ['Merriweather', 'serif'],
     },
     extend: {
+      colors: {
+        red: colors.red,
+        amber: colors.amber,
+        lime: colors.lime,
+        orange: colors.orange,
+        green: colors.green,
+      },
       backgroundColor: {
         'gradient-radial': 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,7,8,1) 49%, rgba(2,0,36,1) 100%)',
         'gradient-conic':

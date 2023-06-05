@@ -17,9 +17,9 @@ const Sidebar = ({ selectedTab, setSelectedTab }: ISidebar) => {
     navigate(ROUTE[idx])
   }
   return (
-    <div className=" sidebar w-[20%] h-full bg-green-radial flex flex-col justify-start items-center">
-        <h1 className="text-primary font-[700] text-[32px] mb-4">C&M</h1>
-        {MENUS.map((menu: string, idx: number) => <div key={menu+idx} className={`${selectedTab === idx ? 'bg-red' : 'bg-white'}  text-dark w-[90%] h-12 px-4 mb-4 rounded-[12px] flex justify-center items-center cursor-pointer hover:scale-[1.05] active:scale-[1] select-none`} onClick={()=> sidebarHandler(idx)}>{menu}</div>)}
+    <div className="sidebar w-[20%] h-full flex flex-col justify-start items-center">
+        <h1 className="text-primary font-[700] text-[32px] mt-4 mb-8">C&M</h1>
+        {MENUS.map((menu: string, idx: number) => <div key={menu+idx} className={`${selectedTab === idx ? 'scale-[1.08]' : ''} bg-green text-primary font-bold w-[90%] h-12 px-4 mb-4 rounded-[12px] flex justify-center items-center cursor-pointer hover:scale-[1.05] active:scale-[1] select-none`} onClick={()=> sidebarHandler(idx)}>{menu}</div>)}
     </div>
   );
 };

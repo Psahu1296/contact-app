@@ -7,7 +7,7 @@ interface IHeader {
 
 const Header = ({selectedTab} : IHeader)  => {
   return (
-    <div className='h-[80px] bg-red font-[600] text-2xl font- flex justify-center items-center'>{MENUS[selectedTab]}</div>
+    <div className='header h-[80px] font-[600] text-2xl font- flex justify-center items-center'>{MENUS[selectedTab]}</div>
   )
 }
 

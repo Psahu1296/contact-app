@@ -26,7 +26,7 @@ function App() {
               />
               <div className="flex-1 flex flex-col">
                 <Header selectedTab={selectedTab} />
-                <div className="flex-1 w-full h-full">
+                <div className="flex-1 w-full h-full bg-dark">
                   <Routes>
                     <Route path="/" element={<ContactList />} />
                     <Route path="chart-map" element={<ChartsMaps />} />

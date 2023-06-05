@@ -29,7 +29,7 @@ const ContactList = () => {
   }
   console.log(contacts);
   return (
-    <div className="w-full h-full bg-white text-dark relative">
+    <div className="w-full h-full bg-dark text-dark relative">
       <div className="w-full flex justify-center">
         <button
           className="p-5 bg-green rounded-[12px] text-primary font-[500] text-xl my-5 hover:scale-[1.05] active:scale-[1]"
@@ -54,7 +54,7 @@ const ContactList = () => {
           </div>
         </div>
       ) : (
-        <div className="flex justify-evenly flex-wrap gap-8">
+        <div className="flex justify-evenly flex-wrap gap-8 overflow-y-auto">
           {contacts.map((contact) => (
             <div>
               <ContactCard contact={contact} />
